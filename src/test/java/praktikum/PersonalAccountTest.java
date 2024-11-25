@@ -58,7 +58,8 @@ public class PersonalAccountTest extends BaseTest {
     public void logoutTest() {
         objHomePage.clickPersonalAccountButton();
         objPersonalAccountPage.clickExitButton();
-
+        objLoginPage.waitPageLoad();
+        assertTrue(objLoginPage.loginButtonIsEnabled());
     }
 
     @After
